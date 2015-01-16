@@ -1,23 +1,24 @@
 //
-//  MainTableViewController.swift
+//  MainViewController.swift
 //  Multiple Animations
 //
-//  Created by Francisco Hui on 1/14/15.
+//  Created by Francisco Hui on 1/16/15.
 //  Copyright (c) 2015 Francisco Hui. All rights reserved.
 //
 
 import UIKit
 
-class MainTableViewController: UITableViewController {
+class MainViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    }
+    @IBAction func unwindToMainViewController (sender: UIStoryboardSegue){
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 }

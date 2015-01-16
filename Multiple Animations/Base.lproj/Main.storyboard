@@ -16,26 +16,26 @@
                     <toolbar key="toolbar" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" id="No6-5a-1wz">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.0" green="0.25098039220000001" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.0078431372549019607" green="0.14509803921568629" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
                     </toolbar>
                     <connections>
-                        <segue destination="Of0-JR-qoZ" kind="relationship" relationship="rootViewController" id="J0P-86-lul"/>
+                        <segue destination="Of0-JR-qoZ" kind="relationship" relationship="rootViewController" id="cNt-fe-HNp"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vlg-VA-rLu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="212" y="485"/>
+            <point key="canvasLocation" x="80" y="479"/>
         </scene>
-        <!--Main Table View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="bdp-T5-WIA">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVw-IW-B4G" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="Of0-JR-qoZ" customClass="MainTableViewController" customModule="Multiple_Animations" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Of0-JR-qoZ" customClass="MainViewController" customModule="Multiple_Animations" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="qwR-up-dL3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.25098039220000001" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="sectionIndexBackgroundColor" red="0.0" green="0.25098039220000001" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.45278823375701904" green="0.58018827438354492" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexTrackingBackgroundColor" red="0.0" green="0.25098039220000001" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection id="JhS-1w-H5N">
@@ -51,11 +51,11 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Post 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4To-or-N7y">
                                                             <rect key="frame" x="138" y="155" width="123" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="1" green="0.95850104093551636" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.61444705724716187" green="0.78072690963745117" blue="0.78166490793228149" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -72,11 +72,11 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Post 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJI-dI-KrY">
                                                             <rect key="frame" x="138" y="155" width="123" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.22570312023162842" green="0.47061508893966675" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.614493727684021" green="0.78100287914276123" blue="0.78194206953048706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -93,11 +93,11 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Post 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q1M-Lu-ytm">
                                                             <rect key="frame" x="138" y="155" width="123" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="1" green="0.56707674264907837" blue="0.23153844475746155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.614493727684021" green="0.78100287914276123" blue="0.78194206953048706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -114,11 +114,11 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Post 4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSm-7b-kds">
                                                             <rect key="frame" x="138" y="155" width="123" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.21743836998939514" green="1" blue="0.44466975331306458" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.614493727684021" green="0.78100287914276123" blue="0.78194206953048706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -135,11 +135,11 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Post 5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKh-dS-prV">
                                                             <rect key="frame" x="138" y="155" width="123" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="1" green="0.25439411401748657" blue="0.23560962080955505" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.614493727684021" green="0.78100287914276123" blue="0.78194206953048706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -166,10 +166,11 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="dcE-5f-HXD"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="711" y="485"/>
+            <point key="canvasLocation" x="711" y="479"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="si6-P9-dw9">
@@ -179,11 +180,11 @@
                         <viewControllerLayoutGuide type="top" id="lsv-ch-yh4"/>
                         <viewControllerLayoutGuide type="bottom" id="pQN-RV-vp5"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ZfX-ys-kmf">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="ZfX-ys-kmf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v2R-85-87R">
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v2R-85-87R">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="text-icon" translatesAutoresizingMaskIntoConstraints="NO" id="qIc-V5-p8C">
@@ -202,7 +203,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="qsN-Dx-6fV" kind="unwind" unwindAction="unwindToMainTableViewController:" id="cBf-Ha-gIr"/>
+                                            <segue destination="qsN-Dx-6fV" kind="unwind" unwindAction="unwindToMainViewController:" id="PCZ-tm-iUd"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -214,7 +215,6 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="v2R-85-87R" firstAttribute="leading" secondItem="ZfX-ys-kmf" secondAttribute="leading" id="Bb7-5L-jDw"/>
                             <constraint firstAttribute="trailing" secondItem="v2R-85-87R" secondAttribute="trailing" id="e9p-yT-cMe"/>
@@ -228,7 +228,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nbT-kj-Ia1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="qsN-Dx-6fV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1211" y="485"/>
+            <point key="canvasLocation" x="1215" y="479"/>
         </scene>
     </scenes>
     <resources>
