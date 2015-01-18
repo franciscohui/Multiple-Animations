@@ -14,7 +14,7 @@ class MainViewController: UITableViewController {
         super.viewDidLoad()
     }
     @IBAction func unwindToMainViewController (sender: UIStoryboardSegue){
-        
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
