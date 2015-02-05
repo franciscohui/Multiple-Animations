@@ -10,26 +10,21 @@ import UIKit
 
 class MenuViewController: UIViewController {
 
+    @IBOutlet weak var textPostIcon: UIImageView!
+    @IBOutlet weak var textPostLabel: UILabel!
+    
+    // Create an instance of the transition manager here, where the icons exist on default state
+    let transitionManager = MenuTransitionManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Not sure why we have this line below for the transitionDelegate
+        self.transitioningDelegate = self.transitionManager
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

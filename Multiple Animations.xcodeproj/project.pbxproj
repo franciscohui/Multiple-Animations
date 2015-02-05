@@ -8,14 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0B67E8D01A669B4500CAD2F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B67E8CF1A669B4500CAD2F2 /* AppDelegate.swift */; };
-		0B67E8D21A669B4500CAD2F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B67E8D11A669B4500CAD2F2 /* ViewController.swift */; };
 		0B67E8D51A669B4500CAD2F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B67E8D31A669B4500CAD2F2 /* Main.storyboard */; };
 		0B67E8D71A669B4500CAD2F2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B67E8D61A669B4500CAD2F2 /* Images.xcassets */; };
 		0B67E8DA1A669B4500CAD2F2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B67E8D81A669B4500CAD2F2 /* LaunchScreen.xib */; };
 		0B67E8E61A669B4500CAD2F2 /* Multiple_AnimationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B67E8E51A669B4500CAD2F2 /* Multiple_AnimationsTests.swift */; };
 		0B67E8F01A669C6B00CAD2F2 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B67E8EF1A669C6B00CAD2F2 /* MenuViewController.swift */; };
-		0B67E8F21A66A1D600CAD2F2 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B67E8F11A66A1D600CAD2F2 /* MainTableViewController.swift */; };
 		0B67E8F41A693FE900CAD2F2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B67E8F31A693FE900CAD2F2 /* MainViewController.swift */; };
+		0B9748FC1A6E888E0066B2EF /* MenuTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9748FB1A6E888E0066B2EF /* MenuTransitionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +31,6 @@
 		0B67E8CA1A669B4500CAD2F2 /* Multiple Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Multiple Animations.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B67E8CE1A669B4500CAD2F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B67E8CF1A669B4500CAD2F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0B67E8D11A669B4500CAD2F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0B67E8D41A669B4500CAD2F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B67E8D61A669B4500CAD2F2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0B67E8D91A669B4500CAD2F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -40,8 +38,8 @@
 		0B67E8E41A669B4500CAD2F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B67E8E51A669B4500CAD2F2 /* Multiple_AnimationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multiple_AnimationsTests.swift; sourceTree = "<group>"; };
 		0B67E8EF1A669C6B00CAD2F2 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		0B67E8F11A66A1D600CAD2F2 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		0B67E8F31A693FE900CAD2F2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ../MainViewController.swift; sourceTree = "<group>"; };
+		0B9748FB1A6E888E0066B2EF /* MenuTransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTransitionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,9 +85,8 @@
 				0B67E8CF1A669B4500CAD2F2 /* AppDelegate.swift */,
 				0B67E8F31A693FE900CAD2F2 /* MainViewController.swift */,
 				0B67E8EF1A669C6B00CAD2F2 /* MenuViewController.swift */,
-				0B67E8D11A669B4500CAD2F2 /* ViewController.swift */,
-				0B67E8F11A66A1D600CAD2F2 /* MainTableViewController.swift */,
 				0B67E8D31A669B4500CAD2F2 /* Main.storyboard */,
+				0B9748FB1A6E888E0066B2EF /* MenuTransitionManager.swift */,
 				0B67E8D81A669B4500CAD2F2 /* LaunchScreen.xib */,
 				0B67E8CD1A669B4500CAD2F2 /* Supporting Files */,
 			);
@@ -221,8 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B67E8F21A66A1D600CAD2F2 /* MainTableViewController.swift in Sources */,
-				0B67E8D21A669B4500CAD2F2 /* ViewController.swift in Sources */,
+				0B9748FC1A6E888E0066B2EF /* MenuTransitionManager.swift in Sources */,
 				0B67E8F01A669C6B00CAD2F2 /* MenuViewController.swift in Sources */,
 				0B67E8D01A669B4500CAD2F2 /* AppDelegate.swift in Sources */,
 				0B67E8F41A693FE900CAD2F2 /* MainViewController.swift in Sources */,
@@ -417,6 +413,7 @@
 				0B67E8EB1A669B4500CAD2F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0B67E8EC1A669B4500CAD2F2 /* Build configuration list for PBXNativeTarget "Multiple AnimationsTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +422,7 @@
 				0B67E8EE1A669B4500CAD2F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

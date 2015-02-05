@@ -9,7 +9,10 @@
 import UIKit
 
 class MainViewController: UITableViewController {
-
+    
+    // Transition manager isn't needed on this view because the icons don't live on this view
+    //let MenuTransitionManager = TransitionManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
