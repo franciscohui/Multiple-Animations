@@ -264,7 +264,7 @@
                                     <constraint firstAttribute="width" constant="207" id="fGb-Aq-yfR"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aU1-Bm-ezJ" userLabel="Quote Icon">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aU1-Bm-ezJ" userLabel="Link Icon">
                                 <rect key="frame" x="260" y="278" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.31879147887229919" green="0.74140363931655884" blue="0.5357862114906311" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -282,7 +282,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Ef-tL-DrV" userLabel="Text Icon">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Ef-tL-DrV" userLabel="Photo Icon">
                                 <rect key="frame" x="260" y="82" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.85936558246612549" green="0.36673563718795776" blue="0.22630444169044495" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -300,7 +300,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6aR-HG-yHu" userLabel="Chat Icon">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6aR-HG-yHu" userLabel="Audio Icon">
                                 <rect key="frame" x="260" y="474" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.65772759914398193" green="0.48245733976364136" blue="0.76797592639923096" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -363,6 +363,16 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="audioPostIcon" destination="6aR-HG-yHu" id="svS-Qx-Avg"/>
+                        <outlet property="audioPostLabel" destination="KzT-Uq-26k" id="Cgu-sT-3kj"/>
+                        <outlet property="chatPostIcon" destination="CyP-fG-mTs" id="urY-8w-sBr"/>
+                        <outlet property="chatPostLabel" destination="ChZ-e4-ZMZ" id="l1g-w0-Cpv"/>
+                        <outlet property="linkPostIcon" destination="aU1-Bm-ezJ" id="6Ib-Jd-QxL"/>
+                        <outlet property="linkPostLabel" destination="lt0-ks-RFw" id="AZL-PS-sTH"/>
+                        <outlet property="photoPostIcon" destination="7Ef-tL-DrV" id="29i-gK-yaE"/>
+                        <outlet property="photoPostLabel" destination="kf3-WJ-qRo" id="FN9-pL-hIZ"/>
+                        <outlet property="quotePostIcon" destination="fB6-RH-pQ0" id="8j6-PR-Rtg"/>
+                        <outlet property="quotePostLabel" destination="qvI-K3-vTR" id="yhH-cl-b5a"/>
                         <outlet property="textPostIcon" destination="47M-2F-AKp" id="HRU-aY-7tI"/>
                         <outlet property="textPostLabel" destination="auP-9e-UDG" id="2wx-aa-W6R"/>
                     </connections>

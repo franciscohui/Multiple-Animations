@@ -18,7 +18,6 @@ class MenuTransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UI
     
     // animate a change from one viewcontroller to another
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
-        //why use UIViewControllerContextTransitioning vs something else? when does auto complete not appear?
 
         let container = transitionContext.containerView()
         
@@ -37,36 +36,112 @@ class MenuTransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UI
         let menuView = menuViewController.view
         let bottomView = bottomViewController.view
         
+        
         // prepare the menu
         if (self.presenting){
-            menuView.alpha = 0
+            self.offStageMenuController(menuViewController)
         }
-        
+
         // add both views to the view controller
         container.addSubview(bottomView)
         container.addSubview(menuView)
         
         let duration = self.transitionDuration(transitionContext)
         
+        
         // perform the animation
         UIView.animateWithDuration(duration, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.8, options: nil, animations: {
             
-                // either fade in or fade out
-                menuView.alpha = self.presenting ? 1 : 0
-
+            if (self.presenting){
+                //objects slide in
+                self.onStageMenuController(menuViewController)
+            }
+            else{
+                // offstage items: slide out
+                self.offStageMenuController(menuViewController)
+            }
+            
             }, completion: { finished in
                 
                 // tell our transitionContext object that we've finished the animation
                 transitionContext.completeTransition(true)
                 
-                // because of a bug, we have to manually add our 'to view' back 
-        //        UIApplication.sharedApplication().keyWindow.addSubview(screens.to.view)
-        })
-    }
+                // because of a bug, we have to manually add our 'to view' back and unwrap keyWindow with an exclamation mark (?)
+                UIApplication.sharedApplication().keyWindow!.addSubview(screens.to.view)
+            })
+        }
+
+        // a new function to stagger the icons
+    
+        // a function called offStage that takes in an amount parameter called (or of type?) CGFloat
+        // this -> is called an arrow operator, it has something to do with objects and dot operators
+        func offStage(amount: CGFloat) -> CGAffineTransform {
+            return CGAffineTransformMakeTranslation(amount, 0)
+        }
+
+    
+        // a new function to create an animation for all 12 IBOutlets
+        func offStageMenuController(menuViewController: MenuViewController){
+
+            menuViewController.view.alpha = 0
+        
+            // set up 2D transitions for animations
+            let topRowOffset: CGFloat = 300
+            let middleRowOffset: CGFloat = 150
+            let bottomRowOffset: CGFloat = 50
+            
+            // let offstageLeft = CGAffineTransformMakeTranslation(-150,0)
+            // let offstageRight = CGAffineTransformMakeTranslation(150,0)
+
+
+            
+            // prepare the menu to slide in
+            menuViewController.textPostIcon.transform = self.offStage(-topRowOffset)
+            menuViewController.textPostLabel.transform = self.offStage(-topRowOffset)
+            
+            menuViewController.photoPostIcon.transform = self.offStage(topRowOffset)
+            menuViewController.photoPostLabel.transform = self.offStage(topRowOffset)
+            
+            menuViewController.quotePostIcon.transform = self.offStage(-middleRowOffset)
+            menuViewController.quotePostLabel.transform = self.offStage(-middleRowOffset)
+            
+            menuViewController.linkPostIcon.transform = self.offStage(middleRowOffset)
+            menuViewController.linkPostLabel.transform = self.offStage(middleRowOffset)
+            
+            menuViewController.chatPostIcon.transform = self.offStage(-bottomRowOffset)
+            menuViewController.chatPostLabel.transform = self.offStage(-bottomRowOffset)
+            
+            menuViewController.audioPostIcon.transform = self.offStage(bottomRowOffset)
+            menuViewController.audioPostLabel.transform = self.offStage(bottomRowOffset)
+
+        }
+    
+        func onStageMenuController(menuViewController: MenuViewController){
+            menuViewController.view.alpha = 1
+            
+            menuViewController.textPostIcon.transform = CGAffineTransformIdentity
+            menuViewController.textPostLabel.transform = CGAffineTransformIdentity
+            
+            menuViewController.photoPostIcon.transform = CGAffineTransformIdentity
+            menuViewController.photoPostLabel.transform = CGAffineTransformIdentity
+
+            menuViewController.quotePostIcon.transform = CGAffineTransformIdentity
+            menuViewController.quotePostLabel.transform = CGAffineTransformIdentity
+            
+            menuViewController.linkPostIcon.transform = CGAffineTransformIdentity
+            menuViewController.linkPostLabel.transform = CGAffineTransformIdentity
+
+            menuViewController.chatPostIcon.transform = CGAffineTransformIdentity
+            menuViewController.chatPostLabel.transform = CGAffineTransformIdentity
+            
+            menuViewController.audioPostIcon.transform = CGAffineTransformIdentity
+            menuViewController.audioPostLabel.transform = CGAffineTransformIdentity
+            
+        }
     
     // return how many seconds the transition animation will take
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval{ // what does -> mean?
-        return 2.0
+        return 0.5
     }
         
     //MARK: UIViewControllerTransitioningDelegate protocol methods
