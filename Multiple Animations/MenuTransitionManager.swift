@@ -8,9 +8,62 @@
 
 import UIKit
 
-class MenuTransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIViewControllerTransitioningDelegate {
+// added UIViewControllerInteractiveTransitioning so the transition manager can accept interactions
+// the three UIViewControllers and the UIPercentDrivenInteractiveTransition are keys to make the MenuTransitionManager userful
+class MenuTransitionManager: UIPercentDrivenInteractiveTransition, UIViewControllerAnimatedTransitioning, UIViewControllerTransitioningDelegate, UIViewControllerInteractiveTransitioning {
     
     private var presenting = false
+    private var interactive = false
+    
+    // private variables can only be referenced within this object
+    private var enterPanGesture: UIScreenEdgePanGestureRecognizer!
+    
+    // not private so that it can be also used by other objects: ie. the MainViewController
+    var sourceViewController: UIViewController! {
+        //executed each time sourceViewController is updated
+        didSet {
+            self.enterPanGesture = UIScreenEdgePanGestureRecognizer()
+            self.enterPanGesture.addTarget(self, action: "handleOnstagePan:")
+            self.enterPanGesture.edges = UIRectEdge.Left
+            self.sourceViewController.view.addGestureRecognizer(self.enterPanGesture)
+        }
+    }
+    
+    func handleOnstagePan(pan: UIPanGestureRecognizer){
+        
+        // how much distance have we panned in reference to the parent view?
+        let translation = pan.translationInView(pan.view!)
+        
+        // convert pan horizontal distance to a percentage
+        let d = translation.x / CGRectGetWidth(pan.view!.bounds) * 0.5
+        
+        // act on different states sent by the gesture recognizer
+        switch (pan.state){
+            
+            case UIGestureRecognizerState.Began:
+                
+                // turn on interactive flag
+                self.interactive = true
+            
+                // trigger the start of the transition
+                self.sourceViewController.performSegueWithIdentifier("presentMenu", sender: self)
+                break
+
+            case UIGestureRecognizerState.Changed:
+            
+                // update progress of the transition
+                self.updateInteractiveTransition(d)
+                break
+            
+            // when the interaction .Ended, .Cancelled, .Failed
+            default:
+                
+                // turn off interactive flag and finish the transition. Does finishing the animation set it to initial or end state?
+                self.interactive = false
+                self.finishInteractiveTransition()
+        }
+        
+    }
     
     //MARK: UIViewControllerAnimatedTransitioning protocol methods
     
@@ -156,5 +209,13 @@ class MenuTransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UI
     func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         self.presenting = false
         return self
+    }
+    
+    func interactionControllerForPresentation(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        return self.interactive ? self: nil
+        
+    }
+    func interactionControllerForDismissal(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        return self.interactive ? self: nil
     }
 }
